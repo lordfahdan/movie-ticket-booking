@@ -16,7 +16,7 @@ const goBack = (route) => {
 </script>
 
 <template>
-  <nav class="fixed left-1/2 top-0 -translate-x-1/2 w-[600px] py-4 bg-cyan-600">
+  <nav class="fixed left-1/2 top-0 -translate-x-1/2 w-full browser:w-[600px] py-4 bg-cyan-600">
     <span v-if="props.to" class="absolute left-4 top-1/2 -translate-y-1/2 text-white cursor-pointer" @click="goBack(props.to)">
       <font-awesome-icon icon="fa-solid fa-arrow-left-long" size="lg" />
     </span>
