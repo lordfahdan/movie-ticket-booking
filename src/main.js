@@ -23,6 +23,16 @@ library.add([
 const pinia = createPinia()
 const app = createApp(App)
 
+/* Default title tag */
+const defaultDocumentTitle = "Movie Booking App";
+
+/* Set document title from route meta */
+router.afterEach((to) => {
+  document.title = to.meta?.title
+  ? `${to.meta.title} — ${defaultDocumentTitle}`
+  : defaultDocumentTitle;
+});
+
 app.use(pinia)
 app.use(router)
 app.use(Vue3Toastify)
