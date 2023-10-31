@@ -22,12 +22,12 @@ const state = reactive({
 const totalSelected = computed(() => state.selected.length)
 
 const funcSeletSeat = (label) => {
-  if (state.selected.indexOf(label) !== -1) return state.selected.splice(state.selected.indexOf(label), 1);
+  if (state.selected?.indexOf(label) !== -1) return state.selected.splice(state.selected?.indexOf(label), 1);
   state.selected.push(label)
 }
 
 const funcSelectedSeat = (label) => {
-  return state.selected.indexOf(label) !== -1
+  return state.selected?.indexOf(label) !== -1
 }
 
 const funcSubmitBooking = () => {
